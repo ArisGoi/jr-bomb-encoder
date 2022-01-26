@@ -1,0 +1,59 @@
+// To edit install sass and copy follow code in cmd-line:
+// sass style.scss style.css --watch
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@mixin monospace {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 400;
+}
+// VARIABLES
+$green: #39E840;
+
+
+// STYLE
+body{
+    background: rgb(46, 46, 46);
+    color: $green;
+    @include monospace;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+img.logo{
+    height: 200px;
+}
+
+#code {
+    margin-top: 120px;
+    background: $green;
+    display: flex;
+    width: fit-content;
+    position: relative;
+
+    h3{
+        font-size: 35px;
+        position: absolute;
+        bottom: calc(100% + 5px);
+        left: 0px;
+    }
+
+    img{
+        height: 50px;
+        max-width: 50px;
+        margin: 20px;
+    }
+}
